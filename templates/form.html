@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meeting Sign-In</title>
+</head>
+<body>
+    <h1>Sign-In Form</h1>
+    <form action="/submit" method="post">
+        <input type="hidden" name="meeting_id" value="{{ meeting_id }}">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required><br><br>
+        <label for="department">Department/Organization:</label>
+        <input type="text" id="department" name="department" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

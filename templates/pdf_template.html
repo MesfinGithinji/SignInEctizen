@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ meeting_name }} Signing Sheet</title>
+</head>
+<body>
+    <h1>{{ meeting_name }} Signing Sheet</h1>
+    <table border="1">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Department</th>
+            <th>Signature</th>
+        </tr>
+        {% for attendee in attendees %}
+        <tr>
+            <td>{{ attendee.first_name }}</td>
+            <td>{{ attendee.last_name }}</td>
+            <td>{{ attendee.email }}</td>
+            <td>{{ attendee.phone }}</td>
+            <td>{{ attendee.department }}</td>
+            <td>_________________________</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

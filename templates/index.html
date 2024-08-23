@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meeting Sign-In</title>
+</head>
+<body>
+    <h1>Meeting Sign-In</h1>
+    <ul>
+        {% for meeting in meetings %}
+        <li>
+            <a href="{{ url_for('meeting', meeting_id=meeting[0]) }}">{{ meeting[1] }} - {{ meeting[2] }}</a>
+            <a href="{{ url_for('generate_qr', meeting_id=meeting[0]) }}">Generate QR</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
